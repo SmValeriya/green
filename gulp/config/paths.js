@@ -24,20 +24,20 @@ export const paths = {
   },
   images: {
     src: [
-      `./${srcDir}/images/**/*.{jpg,jpeg,png,gif,tiff}`,
+      `./${srcDir}/images/*.{jpg,jpeg,png,gif,webp}`,
       `!./${srcDir}/images/favicon/*.{jpg,jpeg,png,gif,tiff}`
     ],
-    dist: `./${buildDir}/images/`,
+    dist: `./${buildDir}/images`,
+    watch: `./${srcDir}/images/*.{jpg,jpeg,png,gif,webp}`,
   },
   svg: {
-    src: [
-      `./${srcDir}/images/**/*.svg`,
-      `!./${srcDir}/images/icons/*.svg`
-    ],
+    src: `./${srcDir}/images/*.svg`,
     dist: `./${buildDir}/images/`,
+    watch: `./${srcDir}/images/*.svg`,
   },
   sprite: {
     src: `./${srcDir}/images/icons/*.svg`,
-    dist: `./${buildDir}/images/`,
+    dist: `./${srcDir}/images`,
+    spriteFile: `${srcDir}/images/sprite.svg`,
   }
 };

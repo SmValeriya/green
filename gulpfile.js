@@ -30,7 +30,8 @@ export default series(
   clean,
   fonts,
   fontStyle,
-  parallel(views, styles, scripts, sprite, images, svg),
+  sprite,
+  parallel(views, styles, scripts, images, svg),
   serve
 );
 
@@ -38,6 +39,7 @@ export const build = series(
   clean,
   fonts,
   fontStyle,
-  parallel(views, styles, scripts, sprite, images, svg),
+  sprite,
+  parallel(views, styles, scripts, images, svg),
   reWriteDependencyNames
 )

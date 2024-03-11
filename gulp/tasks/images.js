@@ -1,11 +1,9 @@
 import gulp from "gulp";
 import gulpAvif from "gulp-avif";
 import webp from "gulp-webp";
-import gulpIf from "gulp-if";
 import imagemin, { gifsicle, mozjpeg, optipng } from "gulp-imagemin";
+import newer from "gulp-newer";
 import plumber from "gulp-plumber";
-import rename from "gulp-rename";
-import { isProd } from "../gulp.config.js";
 import { paths } from "../config/paths.js";
 
 const { src, dest } = gulp;
@@ -13,11 +11,16 @@ const { src, dest } = gulp;
 export const images = () => {
   return src(paths.images.src)
     .pipe(plumber())
-    .pipe(gulpAvif())
+    .pipe(newer(paths.images.dist))
+    .pipe(gulpAvif({ quality: 50 }))
+    .pipe(dest(paths.images.dist))
     .pipe(src(paths.images.src))
+    .pipe(newer(paths.images.dist))
     .pipe(webp())
+    .pipe(dest(paths.images.dist))
     .pipe(src(paths.images.src))
-    .pipe(gulpIf(isProd, imagemin([
+    .pipe(newer(paths.images.dist))
+    .pipe(imagemin([
       gifsicle({
         optimizationLevel: 3
       }),
@@ -27,8 +30,7 @@ export const images = () => {
       mozjpeg({
         quality: 75
       })
-    ])))
-    .pipe(rename({ dirname: "" }))
+    ]))
     .pipe(plumber.stop())
     .pipe(dest(paths.images.dist));
 };

@@ -11,6 +11,8 @@ export const serve = (done) => {
   watch(paths.views.watch, series('views', reload));
   watch(paths.styles.watch, series('styles', reload));
   watch(paths.scripts.watch, series('scripts', reload));
+  watch(paths.images.watch, series('images', reload));
+  watch(paths.svg.watch, series('svg', reload));
 
   return done();
 };
