@@ -1,5 +1,3 @@
-block variables
-
 doctype html
 html(lang="en")
   head
@@ -8,7 +6,7 @@ html(lang="en")
       title Title your site
       meta(content="width=device-width, initial-scale=1" name="viewport")
       meta(content="ie=edge" http-equiv="x-ua-compatible")
-      link(rel="stylesheet" href="./styles/" + page + ".min.css")
+      link(rel="stylesheet" href="./styles/style.min.css")
   body
     block header
       include header.pug
@@ -16,4 +14,4 @@ html(lang="en")
     block footer
       include footer.pug
     block scripts
-      script(src="./scripts/" + page + ".min.js")
+      script(src="./scripts/main.min.js")
