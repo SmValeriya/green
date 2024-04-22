@@ -1,0 +1,44 @@
+.reviews__carousel-list {
+  font-size: 24px;
+  margin-bottom: 50px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.reviews__carousel-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.reviews__carousel-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.reviews__carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.reviews__carousel-arrow {
+  width: 58px;
+  height: 15px;
+  fill: $text-color-primary;
+}
+
+.reviews__carousel-nav--next .reviews__carousel-arrow {
+  transform: rotate(180deg);
+  transform-origin: 50%;
+}

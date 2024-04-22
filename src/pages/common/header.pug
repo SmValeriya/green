@@ -1,2 +1,11 @@
-header
-  p Header
+include ../mixins/logo.pug
+include ../mixins/menu.pug
+include ../mixins/hamburger.pug
+
+header.header
+  .container.header__container
+    +hamburger('header__hamburger')
+    +logo('header__logo')
+    +menu('header')
+    .header__contacts
+      a.header__contacts-link(href="tel:" + contacts.phone.replaceAll(' ', '')) тел. #{contacts.phone}

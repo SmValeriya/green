@@ -1,0 +1,45 @@
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 40px 20px;
+
+  @include phones {
+    grid-template-columns: 1fr;
+  }
+}
+
+.accordion__title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+  &::marker {
+    font-size: 0;
+  }
+
+  @include tablets {
+    font-size: 18px;
+  }
+}
+
+.accordion__arrow {
+  width: 95px;
+  height: 26px;
+  padding: 0 40px;
+  flex-shrink: 0;
+  fill: $bg-color-accent;
+
+  @include tablets {
+    width: 35px;
+    padding: 0 0 0 20px;
+  }
+
+  @include phones {
+    width: 25px;
+    padding: 0 0 0 10px;
+  }
+}

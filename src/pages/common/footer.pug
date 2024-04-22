@@ -1,2 +1,12 @@
-footer
-  p Footer
+include ../mixins/logo.pug
+include ../mixins/menu.pug
+include ../mixins/socials.pug
+
+footer.footer
+  div.container.footer__container
+    .footer__col
+      +menu('footer')
+      +socials('footer__socials')
+    .footer__col
+      +logo('footer__logo')
+      h2.footer__heading Реалізуйте Ваші зелені мрії з нами

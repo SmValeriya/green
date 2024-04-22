@@ -1,0 +1,22 @@
+section#details.details.section
+  .container.details__container
+    .details__content
+      h2.details__heading.heading Детальніше
+      p.details__text Хочу безкоштовний виїзд на об’єкт
+      form.details__form.form(action="#")
+        p.form__text Укажіть свої контактні дані і наш менеджер перетелефонує Вам
+        input.form__input(type="text" placeholder="Ім’я")
+        input.form__input(type="phone" placeholder="Телефон")
+        input.form__input(type="text" placeholder="Адреса")
+        button.form__btn.btn(type="submit") Відправити
+      a.details__link(href=socials.telegram)
+        span Або відразу нам в телеграм
+        svg.details__social
+          title Telegram
+          use(href="./images/sprite.svg#telegram")
+    .details__visual
+      ul.details__list
+        each detail in details
+          li.details__item
+            a.details__item-link(href=detail.link)
+              img.details__item-img(src=`./images/${detail.image}.avif` alt="Project")

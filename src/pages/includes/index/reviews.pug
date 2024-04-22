@@ -1,0 +1,20 @@
+section#reviews.reviews.section
+  .container.reviews__container
+    h2.heading.reviews__heading Відгуки
+    .reviews__carousel.swiper
+      ul.reviews__carousel-list.swiper-wrapper
+        each review in reviews
+          li.reviews__carousel-item.swiper-slide
+            .reviews__carousel-header
+              img.reviews__carousel-img(src=`./images/${review.image}.avif` alt=review.author)
+              p.reviews__carousel-name= review.author
+            p.reviews__carousel-text= review.text
+      .reviews__carousel-nav
+        button.reviews__carousel-nav--prev(type="button")
+          svg.reviews__carousel-arrow(viewbox="0 0 59 12")
+            title Arrow Prev
+            use(href="./images/sprite.svg#arrow")
+        button.reviews__carousel-nav--next(type="button")
+          svg.reviews__carousel-arrow
+            title Arrow Next
+            use(href="./images/sprite.svg#arrow")

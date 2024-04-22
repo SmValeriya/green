@@ -1,0 +1,46 @@
+.team__text {
+  font-size: 28px;
+  margin-bottom: 50px;
+
+  @include tablets {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.team__list {
+  display: flex;
+  justify-content: center;
+  gap: 20px 50px;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
+}
+
+.team__item {
+  width: 200px;
+}
+
+.team__item-img {
+  border: 1px solid $bg-color-accent;
+  margin-bottom: 10px;
+  height: 250px;
+  width: 200px;
+  object-fit: contain;
+}
+
+.team__item-name {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.team__item-occupation {
+  @include phones {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,13 @@
+.socials {
+  display: flex;
+  gap: 0 16px;
+}
+
+.socials__item {
+  width: 24px;
+  height: 24px;
+}
+
+.socials__img {
+  fill: $text-color-secondary
+}

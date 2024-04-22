@@ -1,0 +1,9 @@
+section#services.services.section
+  .container.services__container
+    h2.services__heading.heading Послуги
+    p.services__text Ми працюємо з усіма типами просторів. Зверніться до нас, щоб створити ваш ідеальний ландшафт.
+    ul.services__list
+      each service in services
+        li.services__item
+          img.services__item-img(src=`./images/${service.image}.svg` alt=service.text)
+          p.services__item-text= service.text

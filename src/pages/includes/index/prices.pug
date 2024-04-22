@@ -1,0 +1,14 @@
+section#prices.prices.section
+  .container.prices__container
+    h2.prices__heading.heading Тарифи і ціни
+    p.prices__text Команда зеленого дизайну може розглянути бажання клієнта та створити індивідуальний пакет послуг, який відповідає їхнім очікуванням та бюджету.
+    ul.prices__list
+      each plan in plans
+        li.prices__item
+          p.prices__item-title= plan.title
+          ul.prices__item-options
+            each option in plan.options
+              li.prices__item-option= option
+          p.prices__item-price #{plan.price} м
+            sup 2
+          a.prices__item-btn.btn(href="#") Замовити розрахунок

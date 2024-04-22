@@ -1,10 +1,49 @@
-footer {
-  &:hover {
-    border: 1px solid red;
+.footer {
+  padding: 40px 0 45px;
+  background-color: $bg-color-secondary;
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer__col {
+  padding-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+
+  &:first-of-type {
+    align-items: center;
   }
 
   @include tablets {
-    width: 480px;
-    height: 560px;
+    padding-inline: 10px;
+  }
+
+  @include phones {
+    padding-inline: 0;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 40px;
+  height: 87px;
+  align-self: start;
+}
+
+.footer__heading {
+  max-width: 325px;
+  font-size: 36px;
+  font-weight: 600;
+
+  @include tablets {
+    font-size: 28px;
+    max-width: 270px;
+  }
+
+  @include phones {
+    font-size: 18px;
+    max-width: 165px;
   }
 }

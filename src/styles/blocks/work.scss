@@ -1,0 +1,57 @@
+.work__list {
+  counter-reset: work;
+  max-width: 1070px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 0 15px;
+}
+
+.work__item {
+  font-size: 28px;
+  position: relative;
+  line-height: 185px;
+  padding-left: 64px;
+
+  @include laptop {
+    padding-left: 30px;
+    line-height: 140px;
+  }
+
+  @include tablets {
+    font-size: 18px;
+    line-height: 95px;
+  }
+
+  @include phones {
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 32px;
+  }
+
+  &::before {
+    content: counter(work, decimal-leading-zero);
+    counter-increment: work;
+    font-family: KaiseiDecol, serif;
+    font-size: 128px;
+    color: rgba(#6D9773, 0.2);
+    font-weight: 400;
+    letter-spacing: -8px;
+    position: absolute;
+    left: 0;
+    -webkit-text-stroke: 1px $text-color-primary;
+
+    @include laptop {
+      font-size: 96px;
+    }
+
+    @include tablets {
+      font-size: 64px;
+    }
+
+    @include phones {
+      font-size: 36px;
+    }
+  }
+}

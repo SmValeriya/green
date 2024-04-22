@@ -1,0 +1,9 @@
+section.why.section
+  .container.why__container
+    h2.why__heading.heading Чому ми?
+    p.why__text Ви обираєте якість, креативність та натхнення для вашого саду.
+    .why__content
+      include why-img.pug
+      ol.why__list
+        each advantage in advantages
+          li.why__item= advantage

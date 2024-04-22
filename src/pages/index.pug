@@ -2,15 +2,15 @@ extends common/layout.pug
 
 block content
   main.main
-    h2 Title
-    include includes/index/banner.pug
-    hr
-    p paragraph
-    ul.items
-      each val in team
-        li= val
-      h1.navbar__title This is my nav
-      ul
-        each val in ["Home", "Blog", "About"]
-          li.navbar__button
-            a(href="#")= val
+    include includes/index/intro.pug
+    include includes/index/about.pug
+    include includes/index/why.pug
+    include includes/index/projects.pug
+    include includes/index/services.pug
+    include includes/index/prices.pug
+    include includes/index/work.pug
+    include includes/index/team.pug
+    include includes/index/faq.pug
+    include includes/index/details.pug
+    include includes/index/reviews.pug
+    include includes/index/contacts.pug

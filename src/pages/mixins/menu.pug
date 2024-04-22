@@ -1,0 +1,6 @@
+mixin menu(classList)
+  nav.menu(class=`${classList}__menu`)
+    ul.menu__list(class=`menu__list--${classList}`)
+      each item in menu
+        li.menu__item
+          a.menu__link(href=item.link)= item.title

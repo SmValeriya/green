@@ -1,17 +1,19 @@
 doctype html
-html(lang="en")
+html(lang="uk")
   head
     block head
       meta(charset="utf-8")
-      title Title your site
+      title Зелена палітра
       meta(content="width=device-width, initial-scale=1" name="viewport")
       meta(content="ie=edge" http-equiv="x-ua-compatible")
       link(rel="stylesheet" href="./styles/style.min.css")
+
   body
-    block header
-      include header.pug
-    block content
-    block footer
-      include footer.pug
+    .wrapper
+      block header
+        include header.pug
+      block content
+      block footer
+        include footer.pug
     block scripts
-      script(src="./scripts/main.min.js")
+      script(src="./scripts/main.min.js" defer)

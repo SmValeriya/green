@@ -24,20 +24,23 @@ export const paths = {
   },
   images: {
     src: [
-      `./${srcDir}/images/*.{jpg,jpeg,png,gif,webp}`,
-      `!./${srcDir}/images/favicon/*.{jpg,jpeg,png,gif,tiff}`
+      `./${srcDir}/images/src/*.{jpg,jpeg,png,gif,webp}`,
     ],
-    dist: `./${buildDir}/images`,
-    watch: `./${srcDir}/images/*.{jpg,jpeg,png,gif,webp}`,
+    dist: `./${srcDir}/images/build/`,
+    watch: `./${srcDir}/images/src/*.{jpg,jpeg,png,gif,webp}`,
   },
   svg: {
-    src: `./${srcDir}/images/*.svg`,
-    dist: `./${buildDir}/images/`,
-    watch: `./${srcDir}/images/*.svg`,
+    src: `./${srcDir}/images/src/*.svg`,
+    dist: `./${srcDir}/images/build/`,
+    watch: `./${srcDir}/images/src/*.svg`,
   },
   sprite: {
-    src: `./${srcDir}/images/icons/*.svg`,
-    dist: `./${srcDir}/images`,
-    spriteFile: `${srcDir}/images/sprite.svg`,
-  }
+    src: `./${srcDir}/images/src/icons/*.svg`,
+    dist: `./${srcDir}/images/build/`,
+    spriteFile: `${srcDir}/images/build/sprite.svg`,
+  },
+  imagesCopy: {
+    src: `./${srcDir}/images/build/**.*`,
+    dist: `./${buildDir}/images/`,
+  },
 };

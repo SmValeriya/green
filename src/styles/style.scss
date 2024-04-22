@@ -1,4 +1,7 @@
+@import "./layout/reset";
 @import "./layout/variables";
 @import "./layout/mixins";
 @import "./layout/fonts";
+@import "swiper/swiper-bundle";
+@import "./layout/base";
 @import "./blocks/*";

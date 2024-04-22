@@ -22,7 +22,9 @@ export const styles = () => {
     .pipe(gulpIf(!isProd, sourcemaps.init()))
     .pipe(plumber())
     .pipe(sassGlob())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: ['./node_modules/']
+    }).on('error', sass.logError))
     .pipe(gulpIf(isProd, groupmedia()))
     .pipe(gulpIf(isProd, autoPrefixer({
       cascade: false,

@@ -1,9 +1,79 @@
-header {
-  width: 220px;
-  display: flex;
-  background-color: yellow;
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 30px 0;
+
+  @include phones {
+    padding: 10px 0;
+  }
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 
   @include tablets {
-    width: 500px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include phones {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 10px;
+  }
+}
+
+.header__hamburger {
+  display: none;
+
+  @include tablets {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.header__logo {
+  justify-self: start;
+  height: 64px;
+
+  @include tablets {
+    justify-self: center;
+  }
+
+  @include phones {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+}
+
+.header__menu {
+  justify-self: center;
+
+  @include tablets {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 70px 0;
+    background-color: $bg-color-accent;
+    text-align: center;
+    z-index: 1;
+    transform: translateY(-120%);
+    transition: transform .03 ease;
+
+    &.open {
+      transform: translateY(0);
+    }
+  }
+}
+
+.header__contacts {
+  justify-self: end;
+  color: $text-color-secondary;
+
+  @include tablets {
+    align-self: center;
   }
 }

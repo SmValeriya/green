@@ -1,0 +1,99 @@
+.prices__text {
+  font-size: 28px;
+  max-width: 730px;
+  margin-bottom: 50px;
+
+  @include tablets {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.prices__list {
+  display: flex;
+  gap: 20px;
+  counter-reset: prices;
+
+  @include tablets {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.prices__item {
+  border: 2px solid $bg-color-accent;
+  padding: 60px 55px 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  @include laptop {
+    padding: 40px 10px;
+  }
+
+  @include tablets {
+    max-width: 470px;
+  }
+}
+
+.prices__item-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+
+  &::before {
+    content: counter(prices) '. ';
+    counter-increment: prices;
+  }
+
+  @include tablets {
+    font-size: 28px;
+  }
+
+  @include phones {
+    font-size: 24px;
+  }
+}
+
+.prices__item-options {
+  margin-bottom: auto;
+}
+
+.prices__item-option {
+  font-size: 24px;
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.prices__item-price {
+  font-size: 36px;
+  font-weight: 700;
+  padding-top: 60px;
+  margin-bottom: 62px;
+
+  @include phones {
+    font-size: 28px;
+  }
+}
+
+.prices__item-btn {
+  width: 100%;
+}

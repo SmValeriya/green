@@ -1,0 +1,13 @@
+section#faq.faq.section
+  .container.faq__container
+    h2.faq__heading.heading Часті питання
+    ul.faq__accordion.accordion
+      each faq in faqs
+        li.accordion__item
+          details.accordion__inner
+            summary.accordion__title
+              span= faq.question
+              svg.accordion__arrow
+                title Arrow
+                use(href="./images/sprite.svg#arrow-down")
+            p.accordion__description= faq.answer

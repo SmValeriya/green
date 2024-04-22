@@ -1,0 +1,18 @@
+section#contacts.contacts.section
+  .container.contacts__container
+    h2.contacts__heading.heading Контакти
+    .contacts__content
+      include contacts-img.pug
+      .contacts__subheading Зателефонуйте зараз та розпочніть трансформацію вашого саду у справжній рай на землі!
+      dl.contacts__info
+        .contacts__info-item
+          dt Телефон
+          dd
+            a(href=`tel:${contacts.phone}`)= contacts.phone
+        .contacts__info-item
+          dt Адреса
+          dd #{contacts.address}
+        .contacts__info-item
+          dt Графік роботи
+          dd #{contacts.schedule}
+      a.contacts__btn.btn(href="#") Замовити дзвінок

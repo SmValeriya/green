@@ -1,0 +1,10 @@
+section#projects.projects.section
+  .container.projects__container
+    h2.projects__heading.heading Наші проекти
+    p.projects__text Ми гарантуємо, що ваші очі будуть радіти кожен раз, коли ви будете насолоджуватися вашим новим ландшафтом.
+    ul.projects__list
+      each project in projects
+        li.projects__item
+          a.projects__item-link(href=project.link)
+            img.projects__item-img(src=`./images/${project.image}.avif` alt=project.image)
+          p.projects__item-location(class=`projects__item-location--${project.descriptionPosition}`)= project.location

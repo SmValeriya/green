@@ -1,0 +1,14 @@
+.heading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 50px;
+
+  @include laptop {
+    margin-bottom: 30px;
+  }
+
+  @include tablets {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}

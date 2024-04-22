@@ -1,0 +1,60 @@
+.services {
+  padding: 20px 0 40px;
+  background-color: $bg-color-secondary;
+}
+
+.services__text {
+  max-width: 585;
+  font-size: 28px;
+  margin-bottom: 30px;
+
+  @include tablets {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.services__list {
+  padding: 0 25px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include tablets {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
+
+.services__item {
+  width: 25%;
+
+  @include tablets {
+    width: 50%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.services__item-img {
+  margin: 0 auto 20px;
+}
+
+.services__item-text {
+  font-size: 24px;
+
+  @include laptop {
+    font-size: 20px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}

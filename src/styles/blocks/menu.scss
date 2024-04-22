@@ -1,0 +1,18 @@
+.menu__list {
+  display: flex;
+  justify-content: center;
+  gap: 20px 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &--footer {
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+
+  &--header {
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+}

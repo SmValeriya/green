@@ -1,0 +1,11 @@
+section#team.team.section
+  .container.team__container
+    h2.team__heading.heading Наша команда
+    p.team__text Ландшафтний дизайн — це мистецтво створення краси, а Зелена палітра — це художники, які знають секрети кожного відтінку природи.
+    .team__inner
+      ul.team__list
+        each member in team
+          li.team__item
+            img.team__item-img(src=`./images/${member.image}.avif` alt=member.header)
+            p.team__item-name= member.header
+            p.team__item-occupation= member.description
